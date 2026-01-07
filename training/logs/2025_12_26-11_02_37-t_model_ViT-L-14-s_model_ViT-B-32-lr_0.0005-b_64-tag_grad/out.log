@@ -1,0 +1,109 @@
+2025-12-26,11:02:37 | INFO | Running with a single process. Device cuda:0.
+2025-12-26,11:02:37 | INFO | Loaded ViT-B-32 model config.
+2025-12-26,11:02:39 | INFO | Loaded ViT-L-14 model config.
+2025-12-26,11:02:44 | INFO | Teacher Visual Params:
+2025-12-26,11:02:44 | INFO | 303.966208M
+2025-12-26,11:02:44 | INFO | Teacher Text Params:
+2025-12-26,11:02:44 | INFO | 85.054464M
+2025-12-26,11:02:44 | INFO | Student Visual Params:
+2025-12-26,11:02:44 | INFO | 87.849216M
+2025-12-26,11:02:44 | INFO | Student Text Params:
+2025-12-26,11:02:44 | INFO | 37.828608M
+2025-12-26,11:02:44 | INFO |   alpha_afd_loss: 0.0
+2025-12-26,11:02:44 | INFO |   alpha_ckd_loss: 1.0
+2025-12-26,11:02:44 | INFO |   alpha_cross_kd_loss: 0.0
+2025-12-26,11:02:44 | INFO |   alpha_fd_loss: 2000
+2025-12-26,11:02:44 | INFO |   alpha_gd_loss: 0.0
+2025-12-26,11:02:44 | INFO |   alpha_icl_loss: 1.0
+2025-12-26,11:02:44 | INFO |   alpha_taxo_max: 0.05
+2025-12-26,11:02:44 | INFO |   batch_size: 64
+2025-12-26,11:02:44 | INFO |   beta1: 0.9
+2025-12-26,11:02:44 | INFO |   beta2: 0.98
+2025-12-26,11:02:44 | INFO |   checkpoint_path: ./logs/2025_12_26-11_02_37-t_model_ViT-L-14-s_model_ViT-B-32-lr_0.0005-b_64-tag_grad/checkpoints
+2025-12-26,11:02:44 | INFO |   copy_codebase: False
+2025-12-26,11:02:44 | INFO |   csv_caption_key: title
+2025-12-26,11:02:44 | INFO |   csv_img_key: filepath
+2025-12-26,11:02:44 | INFO |   csv_separator: 	
+2025-12-26,11:02:44 | INFO |   data_root: None
+2025-12-26,11:02:44 | INFO |   dataset_resampled: False
+2025-12-26,11:02:44 | INFO |   dataset_type: csv
+2025-12-26,11:02:44 | INFO |   ddp_static_graph: False
+2025-12-26,11:02:44 | INFO |   debug: True
+2025-12-26,11:02:44 | INFO |   device: cuda:0
+2025-12-26,11:02:44 | INFO |   dist_backend: nccl
+2025-12-26,11:02:44 | INFO |   dist_url: env://
+2025-12-26,11:02:44 | INFO |   distributed: False
+2025-12-26,11:02:44 | INFO |   epochs: 1
+2025-12-26,11:02:44 | INFO |   eps: 1e-06
+2025-12-26,11:02:44 | INFO |   eval: False
+2025-12-26,11:02:44 | INFO |   force_custom_text: False
+2025-12-26,11:02:44 | INFO |   force_quick_gelu: False
+2025-12-26,11:02:44 | INFO |   gather_with_grad: False
+2025-12-26,11:02:44 | INFO |   grad_checkpointing: False
+2025-12-26,11:02:44 | INFO |   grad_clip_norm: None
+2025-12-26,11:02:44 | INFO |   horovod: False
+2025-12-26,11:02:44 | INFO |   image_mean: None
+2025-12-26,11:02:44 | INFO |   image_std: None
+2025-12-26,11:02:44 | INFO |   imagenet_a: None
+2025-12-26,11:02:44 | INFO |   imagenet_r: None
+2025-12-26,11:02:44 | INFO |   imagenet_sketch: None
+2025-12-26,11:02:44 | INFO |   imagenet_v2: None
+2025-12-26,11:02:44 | INFO |   imagenet_val: None
+2025-12-26,11:02:44 | INFO |   local_loss: False
+2025-12-26,11:02:44 | INFO |   local_rank: 0
+2025-12-26,11:02:44 | INFO |   lock_image: False
+2025-12-26,11:02:44 | INFO |   lock_image_freeze_bn_stats: False
+2025-12-26,11:02:44 | INFO |   lock_image_unlocked_groups: 0
+2025-12-26,11:02:44 | INFO |   lock_text: True
+2025-12-26,11:02:44 | INFO |   lock_text_freeze_layer_norm: False
+2025-12-26,11:02:44 | INFO |   lock_text_unlocked_layers: 0
+2025-12-26,11:02:44 | INFO |   log_level: 10
+2025-12-26,11:02:44 | INFO |   log_local: False
+2025-12-26,11:02:44 | INFO |   log_path: ./logs/2025_12_26-11_02_37-t_model_ViT-L-14-s_model_ViT-B-32-lr_0.0005-b_64-tag_grad/out.log
+2025-12-26,11:02:44 | INFO |   logs: ./logs/
+2025-12-26,11:02:44 | INFO |   lr: 0.0005
+2025-12-26,11:02:44 | INFO |   mask_ratio: 0.0
+2025-12-26,11:02:44 | INFO |   model: ViT-B-32
+2025-12-26,11:02:44 | INFO |   model_checkpoint: /home/111_wcy/work/clip-kd/Hierarchical-KD/CLIP-KD-wcy/models/ViT-B-32_openclip.pt
+2025-12-26,11:02:44 | INFO |   name: 2025_12_26-11_02_37-t_model_ViT-L-14-s_model_ViT-B-32-lr_0.0005-b_64-tag_grad
+2025-12-26,11:02:44 | INFO |   no_set_device_rank: False
+2025-12-26,11:02:44 | INFO |   num_per_class: 1
+2025-12-26,11:02:44 | INFO |   precision: amp
+2025-12-26,11:02:44 | INFO |   pretrained: 
+2025-12-26,11:02:44 | INFO |   pretrained_image: False
+2025-12-26,11:02:44 | INFO |   rank: 0
+2025-12-26,11:02:44 | INFO |   report_to: 
+2025-12-26,11:02:44 | INFO |   resume: None
+2025-12-26,11:02:44 | INFO |   save_frequency: 1
+2025-12-26,11:02:44 | INFO |   save_most_recent: False
+2025-12-26,11:02:44 | INFO |   seed: 0
+2025-12-26,11:02:44 | INFO |   skip_scheduler: False
+2025-12-26,11:02:44 | INFO |   sup_batch_size: 64
+2025-12-26,11:02:44 | INFO |   t_embed_dim: 512
+2025-12-26,11:02:44 | INFO |   t_eval: False
+2025-12-26,11:02:44 | INFO |   t_model: ViT-L-14
+2025-12-26,11:02:44 | INFO |   t_model_checkpoint: /home/111_wcy/work/clip-kd/Hierarchical-KD/CLIP-KD-wcy/models/bioclip2/open_clip_pytorch_model.bin
+2025-12-26,11:02:44 | INFO |   tag: grad
+2025-12-26,11:02:44 | INFO |   taxo_jsonl: /home/111_wcy/work/clip-kd/Hierarchical-KD/CLIP-KD-main/datasets/out_val_json.jsonl
+2025-12-26,11:02:44 | INFO |   taxo_ramp_epochs: 4.0
+2025-12-26,11:02:44 | INFO |   taxo_warmup_epochs: 2.0
+2025-12-26,11:02:44 | INFO |   tensorboard: False
+2025-12-26,11:02:44 | INFO |   tensorboard_path: 
+2025-12-26,11:02:44 | INFO |   torchscript: False
+2025-12-26,11:02:44 | INFO |   trace: False
+2025-12-26,11:02:44 | INFO |   train_data: /home/111_wcy/work/clip-kd/Hierarchical-KD/CLIP-KD-wcy/datasets/val.csv
+2025-12-26,11:02:44 | INFO |   train_num_samples: None
+2025-12-26,11:02:44 | INFO |   use_bn_sync: False
+2025-12-26,11:02:44 | INFO |   val_data: /home/111_wcy/work/clip-kd/Hierarchical-KD/CLIP-KD-wcy/datasets/test.csv
+2025-12-26,11:02:44 | INFO |   val_data_root: None
+2025-12-26,11:02:44 | INFO |   val_dataset_type: csv
+2025-12-26,11:02:44 | INFO |   val_frequency: 1
+2025-12-26,11:02:44 | INFO |   val_num_samples: None
+2025-12-26,11:02:44 | INFO |   vl_batch_size: 64
+2025-12-26,11:02:44 | INFO |   wandb: False
+2025-12-26,11:02:44 | INFO |   wandb_notes: 
+2025-12-26,11:02:44 | INFO |   warmup: 10000
+2025-12-26,11:02:44 | INFO |   wd: 0.2
+2025-12-26,11:02:44 | INFO |   workers: 1
+2025-12-26,11:02:44 | INFO |   world_size: 1
+2025-12-26,11:02:44 | INFO |   zeroshot_frequency: 2
