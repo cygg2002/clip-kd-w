@@ -1,0 +1,13 @@
+python -m src.training.main_me --model ViT-B-32 --model-checkpoint /home/111_wcy/work/CLIP-KD/models/VIT-B-32/pytorch_model.bin --t-model ViT-L-14 --t-model-checkpoint /home/111_wcy/work/CLIP-KD/models/bioclip2/open_clip_pytorch_model.bin --train-data /home/111_wcy/work/clip-kd/CLIP-KD-main/data/images_out/train.csv --val-data /home/111_wcy/work/clip-kd/CLIP-KD-main/data/images_out/val.csv --batch-size 4 --epochs 5 --workers 1 --precision amp --logs ./logs --lr 1e-4 --name bioclip2_to_clip
+
+
+python -m src.training.main_kd --model ViT-B-16 --t-model ViT-L-14 --t-model-checkpoint /home/111_wcy/work/CLIP-KD/models/bioclip2/open_clip_pytorch_model.bin --train-data /home/111_wcy/work/clip-kd/CLIP-KD-main/data/mammal_images/test.csv --val-data /home/111_wcy/work/clip-kd/CLIP-KD-main/data/mammal_images/val.csv --batch-size 256 --epochs 20 --workers 64 --precision amp --logs ./logs --lr 1e-4 
+
+export PYTHONPATH=$(pwd)/src:$PYTHONPATH
+python -m src.training.main_kd --model ViT-B-16 --t-model ViT-L-14 --model-checkpoint /home/111_wcy/work/clip-kd/distillation/CLIP-KD-main/models/vit_b_16-laion400m_e32-55e67d44.pt --t-model-checkpoint /home/111_wcy/work/clip-kd/distillation/CLIP-KD-main/models/bioclip2/open_clip_pytorch_model.bin --train-data /home/111_wcy/work/clip-kd/CLIP-KD-main/data/mammal_images/train.csv --val-data /home/111_wcy/work/clip-kd/CLIP-KD-main/data/mammal_images/val.csv --batch-size 128 --epochs 32 --workers 8 --precision amp --logs ./logs --lr 5e-4 --name bioclip2_to_clipb16_fd_icl --warmup 10000
+
+
+python -m src.training.main_wcy --model ViT-B-32 --t-model ViT-L-14 --model-checkpoint /home/111_wcy/work/clip-kd/Hierarchical-KD/CLIP-KD-main/models/ViT-B-32_openclip.pt --t-model-checkpoint /home/111_wcy/work/clip-kd/Hierarchical-KD/CLIP-KD-main/models/bioclip2/open_clip_pytorch_model.bin --train-data /home/111_wcy/work/clip-kd/Hierarchical-KD/CLIP-KD-main/datasets/val.csv --val-data /home/111_wcy/work/clip-kd/Hierarchical-KD/CLIP-KD-main/datasets/test.csv --batch-size 16 --epochs 1 --workers 4 --precision amp --logs ./logs --lr 5e-4  --warmup 10000 --lock-text
+
+
+python -m src.training.main_kd --model ViT-B-32 --t-model ViT-L-14  --t-model-checkpoint /home/111_wcy/work/CLIP-KD/models/bioclip2/open_clip_pytorch_model.bin --train-data /home/111_wcy/work/clip-kd/CLIP-KD-main/data/mammal_images/train.csv --val-data /home/111_wcy/work/clip-kd/CLIP-KD-main/data/mammal_images/val.csv --batch-size 128 --epochs 32 --workers 8 --precision amp --logs ./logs --lr 5e-4 --name bioclip2_to_clipb32_fd_icl --warmup 10000 --resume /home/111_wcy/work/clip-kd/distillation/CLIP-KD-main/logs/bioclip2_to_clipb32_fd_icl/checkpoints/epoch_latest.pt --save-most-recent
